@@ -25,7 +25,7 @@ SECRET_KEY = 'h!j%r52qmg5+!(p7)%36-t&%+ockv=x3y*bcrt-1ztr=qe$vxq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '172.29.77.74']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -77,13 +78,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'webtest1',
-        'USER': 'zabbix',
+        'NAME': 'django',
+        'USER': 'root',
         'PASSWORD' : 'imc990',
-        'HOST' : 'localhost',
+        'HOST' : '127.0.0.1',
         'PORT' : '3306',
-        'OPTIONS': {
-            'init_command': 'SET sql_mode="STRICT_TRANS_TABLES"'}
     }
 }
 
